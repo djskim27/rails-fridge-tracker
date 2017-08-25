@@ -62,6 +62,6 @@ if option.upcase == 'F'
   Fridge.find_by(brand: "#{brand}").foods.map {|food| puts food.name}
   puts "Which food do you want to eat?"
   name = gets.chomp
-  Food.find_by(name:"#{name}").destroy
+  Fridge.find_by(brand: "#{brand}").foods.find_by(name:"#{name}").destroy
 end
 
